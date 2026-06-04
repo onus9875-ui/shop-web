@@ -1,14 +1,143 @@
 <!DOCTYPE html>
-<html>
+<html lang="vi">
 <head>
-  <title>Shop Web</title>
-</head>
-<body>
-<h1>SHOP DỊCH VỤ ONLINE</h1>
+<meta charset="UTF-8">
+<title>Apple Style Shop</title>
 
-<button onclick="alert('Facebook 50k')">Facebook</button>
-<button onclick="alert('Zalo 100k')">Zalo</button>
-<button onclick="alert('TikTok 150k')">TikTok</button>
+<style>
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto;
+  background: #0b0b0f;
+  color: white;
+}
+
+/* HEADER */
+.header {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.header h1 {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.header p {
+  color: #aaa;
+}
+
+/* GRID */
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+/* CARD STYLE APPLE GLASS */
+.card {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 20px;
+  padding: 20px;
+  backdrop-filter: blur(10px);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  background: rgba(255,255,255,0.1);
+}
+
+.card h2 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.card p {
+  color: #bbb;
+  font-size: 14px;
+}
+
+.price {
+  margin-top: 10px;
+  font-size: 18px;
+  color: #00ffcc;
+}
+
+/* BUTTON */
+button {
+  margin-top: 15px;
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 12px;
+  background: #0071e3;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: #0a84ff;
+}
+
+/* FOOTER */
+.footer {
+  text-align: center;
+  color: #666;
+  padding: 20px;
+  font-size: 12px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="header">
+  <h1>SHOP DỊCH VỤ ONLINE</h1>
+  <p>Giao diện Apple Style • Nhanh • Gọn • Đẹp</p>
+</div>
+
+<div class="container">
+
+  <!-- FACEBOOK -->
+  <div class="card">
+    <h2>🔥 Dịch vụ Facebook</h2>
+    <p>Tăng like • follow • tương tác</p>
+    <div class="price">50.000đ</div>
+    <button onclick="buy('Facebook Service',50000)">Mua ngay</button>
+  </div>
+
+  <!-- ZALO -->
+  <div class="card">
+    <h2>💬 Zalo Tháng / Năm</h2>
+    <p>Gói theo tháng hoặc năm, tự động gia hạn</p>
+    <div class="price">100.000đ</div>
+    <button onclick="buy('Zalo Package',100000)">Mua ngay</button>
+  </div>
+
+  <!-- TIKTOK -->
+  <div class="card">
+    <h2>🎵 TikTok Nick</h2>
+    <p>Nick mới • 500 - 1K followers sẵn</p>
+    <div class="price">150.000đ</div>
+    <button onclick="buy('TikTok Nick 500-1K',150000)">Mua ngay</button>
+  </div>
+
+</div>
+
+<div class="footer">
+  © Apple Style Shop • Demo Web
+</div>
+
+<script>
+function buy(name, price) {
+  alert("Đã chọn: " + name + "\nGiá: " + price + "đ");
+}
+</script>
 
 </body>
 </html>
